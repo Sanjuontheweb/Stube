@@ -1,0 +1,231 @@
+
+.header{
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  height: 50px;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  background-image: linear-gradient(rgb(220, 220, 220), white);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(191, 191, 191);
+  z-index: 99;
+}
+
+.left-header{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.one{
+  width: 30px;
+  margin-left: 25px;
+  margin-right: 5px;
+  cursor:pointer;
+}
+.two{
+  width: 120px;
+  cursor: pointer;
+}
+.mid-header{
+   max-width: 500px;
+   margin-right: 40px;
+   display: flex;
+   flex: 1;
+   align-items: center;
+}
+.search-box{
+  height: 40px;
+  font-family: Roboto, Arial;
+  font-size: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex: 1;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 18px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.16);
+  margin-right: 10px; 
+  width: 0;
+  min-width: 100px;
+}
+
+.search-box::placeholder{
+  font-family: Roboto, Arial;
+  font-size: 17px;
+}
+
+.three{
+  width:63px;
+  height: 43px;
+  border-radius:9px;
+  border-style: solid;
+  border-color: rgb(200, 200, 200);
+  border-radius: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.three_1{
+  height: 20px;
+}
+.four{
+  width: 43px;
+  height: 43px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 10px;
+  background-color: rgb(209, 209, 209);
+  cursor: pointer;
+  position: relative;
+}
+.four_1{
+  height: 23px;
+}
+
+.right-header{
+  padding-right: 20px;
+  padding-left: 50px;
+  width: 300px;
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+.notification-div{
+  position: relative;
+}
+.not-count{
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  padding: 2px 4px 2px 4px;
+  font-family: Roboto, Arial;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+}
+
+.right_icons{
+  height: 36px;
+  cursor: pointer;
+}
+.channel_profile_pic{
+  width: 42px;
+  height: 42px;
+  border-radius: 40px;
+  height: 40px;
+}
+
+.upload-div, .apps-div, .notification-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip, .upload-div .tooltip,
+ .apps-div .tooltip,
+ .notification-div .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 8px 8px 8px 8px;
+  bottom: -40px;
+  left: 0;
+  border-radius : 3px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.upload-div:hover .tooltip,
+ .apps-div:hover .tooltip,
+ .notification-div:hover .tooltip{
+  opacity: 1;
+}
+.three:hover .tooltip{
+  opacity: 1;
+}
+.four .tooltip{
+  bottom: -40px;
+  left: -25px;
+}
+.four:hover .tooltip{
+  opacity: 1;
+}
+
+.yt_menu{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.yt_menu .tooltip{
+  position: absolute;
+  bottom: -40px;
+  left: 14px;
+}
+.yt_menu:hover .tooltip{
+  opacity: 1;
+}
+.upload-div .tooltip{
+  left: -10px;
+}
+.apps-div .tooltip{
+  left: -4px;
+}
+.notification-div .tooltip{
+  left: -27px;
+}
+
+
+/* nested flexboxs: a flex inside a flex
+                  ex: for search-bar in yt, the flex is used inside the head
+                      section{flex} of the website*/
+
+/* CSS position helps to display smtg on top of another element
+   basically, like another dimention on the page*/
+/* When position is used, it doesnt take up the whole space and position fixed, fixes the element*/
+/* elements: top: to specify how far from the top of the webpage, the
+                  element is
+             left: to specify how far from the left, the element is
+             right, bottom: yada yada;*/
+             /* if more than one element is applied, it stretches and it can be used 
+                with height and width*/
+/* position : places the item on the browser window
+   absolute: places the item on the page
+   Only the page moves up and down, not the browser window
+   browser window is what u see
+   page is the whole document and doesnt relate to ur view while moving
+   By using 'absolute', u basically fix it on a pos in the page
+
+ 'z-index : used to move elements in front or back of an element
+              , basically moving layers in front and back
+        an element of higher z-index value will appear on front 
+        than lower value
+        
+ so, position :'absolute' element cn be used inside of the position(:fixed) element
+   and what it does is
+   it makes the absolute element fixed inside the position elemnt, 
+     like in if u scroll, position element moves with the page and the absolute
+     element inside it is stuck relative to the position element and not the page
+     (ex: sidebar in yt)
+
+  but if u do the opposite, u can do smtg like what shreyas has done in his website
+  like pics at the right side and the text moves within the range of the pic, on the
+  left side of the page.Relative.
+Basically, position relative applies whatever inside it reltive to the element
+   like absolute, the element can be placed relative of that element not the page
+
+   difference between fixed and relative is that watever inside relative, it scrolls 
+   up with that element and fixed moves with our view of the page*/

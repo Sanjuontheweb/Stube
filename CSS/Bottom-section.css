@@ -1,0 +1,87 @@
+
+.bottom-sec{
+  display: grid;
+  background-image: linear-gradient(rgb(230, 230, 230), white);
+  grid-template-rows: 30px 30px 30px;
+  width : 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -250px;
+  left: -8px;
+  justify-content: center;
+}
+
+.heading{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  height: 64px;
+}
+
+.textie{
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 17px;
+  margin-left: 52px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  display: inline-block;
+}
+
+.textie-1{
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  display: inline-block;
+  margin-left: 41px;
+}
+
+.textie-2{
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 17px;
+  margin-left: 30px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  display: inline-block;
+}
+
+.logo{
+  display: grid;
+  grid-template-columns: 90px;
+  left: 100px;
+  bottom: -14px;
+  position: absolute;
+}
+
+.logo-pic{
+  width: 200px;
+  height: 200px;
+}
+
+.logo-1{
+  display: grid;
+  grid-template-columns: 90px;
+  right: 200px;
+  bottom: -14px;
+  position: absolute;
+}
+
+.logo-pic-1{
+  width: 200px;
+  height: 200px;
+}
